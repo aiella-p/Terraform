@@ -1,0 +1,9 @@
+cleresource "aws_instance"  "createInstance" {
+    count = 2
+    ami =       "ami-06c4532923d4ba1ec"
+    instance_type = "t2.micro"
+  tags = {
+    Name = "DemoInstance-${count.index}"
+  }
+}
+
